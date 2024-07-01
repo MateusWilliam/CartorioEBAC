@@ -100,12 +100,7 @@ int deletar()
         
         FILE *file;
 		file = fopen(cpf,"r"); 
-		
-		{
-			printf("Você tem certeza? \n");
-			system("pause");	
-		}
-		
+	
 		if(file == NULL)
 		{
 			printf("O usuário não se encontra no sistema! .\n");
@@ -131,7 +126,8 @@ int main()
 	    printf("Escolha opção desejada do menu:\n\n");
 	    printf("\t1 - Registrar nomes:\n");
 	    printf("\t2 - Consultar nomes:\n");
-	    printf("\t3 - Deletar nomes:\n\n");
+	    printf("\t3 - Deletar nomes:\n");
+	    printf("\t4 - Sair do sistema:\n\n");
 	    printf("Opção: "); //fim do menu
 	
 	    scanf("%d", &opcao); //armazenando a escolha do usuário
@@ -151,6 +147,11 @@ int main()
 		    case 3:
 		    deletar(); // chamada de funções
 			break;
+			
+			case 4:
+	        printf("Obrigado por ultilizar o sistema!\n\n");
+	        return 0;
+	        break;
 			
 			default:
 			printf("Essa opção não está disponivel\n");
